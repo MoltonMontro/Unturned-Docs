@@ -65,4 +65,4 @@ Magazine Asset Properties
 
 **Should_Fill_After_Detach** *bool*: Ammunition should be fully refilled after the magazine attachment is detached from a ranged weapon. Defaults to false.
 
-Ahhh! Bbbb! Test commit 5... :(
+Ahhh! Bbbb! Test commit 15,000 at this point... :(
