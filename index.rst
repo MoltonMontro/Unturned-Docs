@@ -9,8 +9,8 @@
 	:maxdepth: 1
 	:caption: About
 
-	about/command-line
 	about/getting-started
+	about/launch-options
 
 .. First section has articles on assets (in general).
 	Second section lists asset types, alphabetically.

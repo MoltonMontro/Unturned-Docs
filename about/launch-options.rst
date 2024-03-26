@@ -1,7 +1,7 @@
-.. _doc_commandline:
+.. _doc_launch_options:
 
-Command-line Arguments
-======================
+Launch Options
+==============
 
 You can add command-line arguments within Steam:
 
@@ -13,7 +13,7 @@ You can add command-line arguments within Steam:
 
 #. Type options separated by spaces. For example "-FallbackGizmos -Width=1920 -Height=1080" will enable the FallbackGizmos flag, set Width to 1920 and set Height to 1080.
 
-Game options
+Game Options
 ------------
 
 Some command-line arguments are primarily intended for use with the Unturned Dedicated Server app.
@@ -90,7 +90,7 @@ Some command-line arguments are primarily intended for use with the Unturned Ded
 
 **-width** *int*: Override in-game resolution width.
 
-Unity options
+Unity Options
 -------------
 
 Unity's built-in command-line arguments take priority over *Unturned*'s equivalents. Some of the more relevant Unity arguments are mentioned below, but the rest can be found in the `Unity User Manual <https://docs.unity3d.com/2019.4/Documentation/Manual/PlayerCommandLineArguments.html>`_.
