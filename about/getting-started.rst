@@ -3,6 +3,16 @@
 Getting Started
 ===============
 
+To get started with creating mods for *Unturned*, certain tools need to be downloaded first. This article provides a walkthrough for downloading these tools.
+
+Installing Unturned
+-------------------
+
+*Unturned* must be downloaded in order to create and upload mods. The game can be downloaded from `Steam <https://store.steampowered.com/app/304930/>`_. If you are using SteamCMD, its app ID is ``304930``.
+
+Installing Unity
+----------------
+
 Installing the Unity Editor is required for exporting custom content into the game. Most 2021.3 LTS version should be compatible; Unturned currently uses 2021.3.29f1. `View Download Links <https://unity.com/releases/editor/qa/lts-releases?version=2021.3>`_
 
 Once Unity is installed, a project can be created to house custom content. At this point, it is recommended to import Unturned's provided Unity packages.
@@ -40,3 +50,10 @@ This package contains vanilla content examples, and several useful prefabs:
 - ``Resources/Characters/Preview.prefab`` is helpful for previewing clothes.
 
 .. warning:: Custom content should not be placed into the CoreMasterBundle directory. Instead, create a separate directory to house your custom content.
+
+Other Tools
+-----------
+
+- Text editors
+- Image editing software
+- Blender
