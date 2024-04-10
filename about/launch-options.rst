@@ -20,6 +20,30 @@ Game Options
 
 Some of the launch options are primarily intended for use with the Unturned Dedicated Server tool.
 
+.. list-table::
+   :header-rows: 1
+   
+   * - Option
+     - Notes
+   * - +connect
+     - Connect to a server, in the format of ``+connect <ip address>:<port>``.
+   * - -DisableCullingVolumes
+     - Disable object culling distance overrides. Please refer to :ref:`Manual Object Culling <doc_mapping_culling>` for more details.
+   * - -DisableLightLODs
+     - Disable fadeout of dynamic lights. Could be useful for high-quality screenshots.
+   * - -FullscreenMode=
+     - Window mode override.
+   * - -FallbackGizmos
+     - Use 3D Unity line renderer component for debug visualization rather than pixel-perfect lines. Performance with these is lower than the default, so only intended for cases where the default is unimplemented.
+   * - -FarClipDistance
+     - :ref:`float32 <doc_data_builtin_types>` [16.0, 2048.0]. Overrides the maximum draw distance in the graphics menu. By default the lowest max draw distance is 614.4 meters which is slightly higher than the network distance of 512.0 meters. Useful for players who are willing to gain performance at a significant gameplay disadvantage.
+   * - -ForceTrustClient
+     - Disables movement validation (e.g., position difference between ticks matches speed) for vehicles. Using this is not recommended! It is easier for cheaters to fly cars with movement limits disabled. This flag should eventually be removed when(/if) vehicle movement is made server authoritative.
+   * - -FrameRateLimit=
+     - :ref:`int <doc_data_builtin_types>`. Overrides the frame rate limit specified in the display menu. Negative values disable the limit. Useful if game is running at thousands of FPS on the loading screen and overheats.
+   * - 
+     - 
+
 **+connect**: Connect to a server, in the format of ``+connect <ip address>:<port>``.
 
 **-DisableCullingVolumes**: Disable object culling distance overrides. Please refer to :ref:`Manual Object Culling <doc_mapping_culling>` for more details.
