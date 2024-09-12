@@ -27,6 +27,8 @@ The online documentation pages are generated from .rst (reStructuredText) files.
 
 Most documentation files are formatted similarly. Some important notes:
 
+- File names should be lowercase and (if relevant) hyphenated. For example, ``server-hosting-rules.rst`` instead of ``ServerHostingRules.rst``.
+
 - When asset properties are listed, they should generally follow a `**Name** *data type*: Description` format. Depending on the data type, it may be hyperlinked instead of italicized, or may also include required values if there is one.
 
 - Content block directives can be used to add notes, warnings, tips, and other admonitions.
