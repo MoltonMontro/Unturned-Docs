@@ -5,6 +5,72 @@ Vehicle Assets
 
 The **VehicleAsset** class is used by vehicles. These can be driven by players, have support for gun turrets, can function as a storage container for items, and more.
 
+Unity Asset Bundle Contents
+---------------------------
+
+.. figure:: /assets/img/UnityExampleItem.png
+
+	**[PLACEHOLDER]** A example of a vehicle being set up in the Unity editor.
+
+If you imported the ExampleAssets.unitypackage into your project, you can find examples of most official vehicles within ``CoreMasterBundle/Vehicles``. For many modders, simply copying one of these examples and replacing the meshes is sufficient.
+
+To get started from scratch, create a new folder for your custom vehicle. The name of this folder will be relevant when further configuring your item after it has been exported from Unity.
+
+Getting Started
+```````````````
+
+Vehicle.prefab
+~~~~~~~~~~~~~~
+
+All vehicles require a Prefab named "Vehicle". This should be tagged as 8: Vehicle, and layered as 26: Item. Open the "Vehicle" Prefab.
+
+
+
+- It should have a kinematic rigidbody with box colliders outlining the shape as well as an engine sound audiosource.
+- Any renderers can be attached to the root or with LODs as Model_#. Parented to it should be particle systems for "Fire", "Smoke_0" and Smoke_1. Another audiosource should be parented called "Sound" for small noises.
+- Any additional details can be put in an "Objects" transform, and if there is a steering wheel it should be included with that and named "Steer".
+- Seats should be placed in a "Seats" transform and named "Seat_#".
+- If the vehicle can run over players it should have a "Bumper" tagged and layered with 22 and 30 respectively.
+- For colliding with zombies a "Nav" object is needed tagged and layered 14 and 22 respectively.
+- For the server a "Clip" object is needed, identical to vehicle. It should have no rendering related objects attached, however. This usually means the bumper, nav and seats objects.
+- An audioclip named "Ignition" is played when the vehicle is entered.
+- ParticleSystems can be parented to a child of vehicle named "Exhaust", the emission rate of these will increase to the max particle count as speed approaches max speed.
+
+Cars
+```````````````
+
+- The vehicle gameobject needs a "Wheels" transform with wheels named "Wheel_#". This is the visual part, the colliders should be in a "Tires" transform and named "Tire_#".
+- If you would like headlights/taillights on your vehicle you can add "Headlights" and "Taillights" transforms with any lights as children. To add sirens a "Sirens" transform should be parented with a audiosource and two lights named "Siren_0" and "Siren_1".
+- For emissive headlights/taillights/sirens you can add models named "Headlights_Model" and "Taillights_Model", or "Taillight_0_Model"/"Taillight_#_Model" and "Siren_0_Model"/"Siren_1_Model". Unturned will create a material instance for these and animate the emissive color.
+- An audioclip named "Horn" can be provided to allow the player to honk the horn.
+- For the server clip object the tires from your vehicle must be included to allow rolling.
+
+Bikes
+~~~~~~~~~
+
+Airplanes
+```````````````
+
+- Child transform named "Rotors" with props rotated on the local Y axis named "Rotor_#". These need "Model_0" and "Model_1" child meshes with transparent shaders swapped between as speed increases.
+
+Helicopters
+```````````````
+
+- Child transform named "Rotors" with props rotated on the local Y axis named "Rotor_#". These need "Model_0" and "Model_1" child meshes with transparent shaders swapped between as speed increases.
+
+Boats
+```````````````
+
+- Child transform named "DepthMask" with a mesh covering anything underwater and no material to make it look like there's no water in the boat. This can be used for other vehicle types as well.
+- List of colliders parented to "Buoyancy" in vehicle and clip, these generate upwards forces when submerged. This can be used for other vehicle types as well.
+- Note: Make sure the center of the boat is below water, otherwise it will not move as quickly.
+
+Trains
+```````````````
+
+Blimps
+```````````````
+
 Game Data File
 --------------
 
