@@ -15,6 +15,7 @@ Unturned Documentation
 	about/getting-started
 	about/launch-options
 	about/steam-workshop
+	about/community-events
 
 .. toctree::
 	:hidden:
